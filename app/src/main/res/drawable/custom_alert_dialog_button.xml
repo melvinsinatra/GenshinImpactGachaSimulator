@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:state_pressed="false"
+        android:state_hovered="false"
+        android:drawable="@drawable/custom_alert_dialog_button_normal"/>
+
+    <item
+        android:state_pressed="false"
+        android:state_hovered="true"
+        android:drawable="@drawable/custom_alert_dialog_button_hovered"/>
+
+    <item
+        android:state_pressed="true"
+        android:state_hovered="false"
+        android:drawable="@drawable/custom_alert_dialog_button_pressed"/>
+    
+</selector>

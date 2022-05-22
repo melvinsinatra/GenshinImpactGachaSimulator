@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HistoryActivity"
+    android:background="@color/light_beige_2">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_delete_history"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/custom_alert_dialog_button"
+        android:text="Delete History"
+        android:textColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_exit"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_exit" />
+
+
+    <TextView
+        android:id="@+id/history_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="History"
+        android:textSize="36sp"
+        android:layout_centerHorizontal="true"/>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:stretchColumns="1, 2, 3, 4"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/history_tv_title"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Item Type"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:background="@drawable/table_column"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Item Name"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:background="@drawable/table_column"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Wish Type"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:background="@drawable/table_column"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Time Received"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:background="@drawable/table_column"/>
+        </TableRow>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="257dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </ScrollView>
+
+    </TableLayout>
+
+</RelativeLayout>

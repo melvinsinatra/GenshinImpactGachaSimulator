@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:background="@drawable/custom_alert_dialog_background">
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Paimon's Bargains"
+        android:textColor="@color/dark_grey_2"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_dialog_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="An additional 1 Intertwined Fate are needed.\nPurchase with 160 Primogem?"
+        android:textAlignment="center"
+        android:textColor="@color/dark_grey_2"
+        android:textSize="12sp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_alert_cancel"
+            android:layout_width="125dp"
+            android:layout_height="32dp"
+            android:background="@drawable/custom_alert_dialog_button"
+            android:drawableStart="@drawable/ic_cancel"
+            android:drawablePadding="18dp"
+            android:paddingStart="5dp"
+            android:text="Cancel"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_alert_confirm"
+            android:layout_width="125dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/custom_alert_dialog_button"
+            android:drawableStart="@drawable/ic_confirm"
+            android:drawablePadding="14dp"
+            android:paddingStart="5dp"
+            android:text="Confirm"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+</RelativeLayout>

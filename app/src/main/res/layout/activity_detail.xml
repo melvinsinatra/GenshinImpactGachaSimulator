@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    android:background="@color/light_beige_2">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/detail_btn_exit"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_exit" />
+
+
+    <TextView
+        android:id="@+id/detail_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Banner Details"
+        android:textSize="36sp" />
+
+    <TableLayout
+        android:id="@+id/detail_table_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_below="@id/detail_tv_title"
+        android:stretchColumns="1, 2, 3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Item Type"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:background="@drawable/table_column"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Item Name"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:background="@drawable/table_column"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:text="Item Rarity"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:padding="10dp"
+                android:background="@drawable/table_column"/>
+        </TableRow>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="257dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </ScrollView>
+
+    </TableLayout>
+
+</RelativeLayout>
